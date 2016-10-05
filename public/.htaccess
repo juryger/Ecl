@@ -1,0 +1,15 @@
+Options -MultiViews
+RewriteEngine On
+
+# redirect all requests to 'public' root (particularly index.php)
+RewriteBase /ecl/public/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# pass requested path as url parameter of index.php (for POST form data R=307, GET also works)
+RewriteRule ^(.+)$ index.php?path=$1 [QSA,R=307,L]
+
+# todo: exclude css, fonts, images, and js folders
+#RewriteRule ^(?!.*?(css|js|image|font)).*$ index.php?url=$1 [QSA,L]
+

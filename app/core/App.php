@@ -25,7 +25,7 @@ class App
     public function App()
     {
         ECL\WebDiagnostics\Console::Log('BASE_URL: '.BASE_URL);
-        ECL\WebDiagnostics\Console::Log('ROOT_PATH: '.ROOTH_PATH);
+        ECL\WebDiagnostics\Console::Log('DB_STAGE: '.DB_STAGE);
 
         // parse command and its parameters (URL representation)
         $urlParams = $this->parseUrlPath();

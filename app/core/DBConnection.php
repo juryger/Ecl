@@ -1,6 +1,6 @@
 <?php
 
-class DBconnection
+class DbConnection
 {
     private $rs; // Procedural "handle" or "resource" to database
     private $connectRs;
@@ -46,7 +46,7 @@ class DBconnection
         return $result;
     }
 
-    public function DBConnection($pStrDatabase)
+    public function DbConnection($pStrDatabase)
     {
 
         $this->connectDb($pStrDatabase);

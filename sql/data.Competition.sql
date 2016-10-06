@@ -1,0 +1,1 @@
+INSERT INTO `competition`(`title`, `description`, `startDate`, `endDate`) VALUES ('Spring flowers competition 2016', 'The quiz of spring flowers knowledge wiht valueable prizes - high performance computer class!!!', '2016-10-10 00:00:00','2016-10-14 23:59:59')

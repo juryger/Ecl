@@ -1,6 +1,7 @@
 <?php
 
 define("BASE_URL", "/ecl/");
+define("DB_STAGE", "DbMySqlTest");
 
 /**
  * Includes core classes for further processing.

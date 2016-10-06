@@ -7,6 +7,9 @@
  * Time: 12:50 PM
  */
 
+require_once('../app/dal/Db.php');
+require_once('../app/dal/CompetitionMapper.php');
+
 /**
  * Controller for processing Content page commands
  */
@@ -18,6 +21,7 @@ class Contest extends Controller
      * Optional data for navigation
      * </p>
      * @return void
+     * @throws Exception if default competition is not found in database
      */
     public function Index($data = [])
     {
@@ -25,7 +29,29 @@ class Contest extends Controller
 
         ECL\WebDiagnostics\Console::Log('Creating model for Contest');
         $contestInfo = $this->CreateModel('ContestModel');
-        $contestInfo->contestName = 'Some competition title';
+
+        $dbStage = ''.DB_STAGE;
+        $dbh = new $dbStage;
+
+        try{
+            $compMapper = new CompetitionMapper($dbh);
+
+            $defaultCompetition = $compMapper->FindByCompId(1);
+            if (!$defaultCompetition)
+            {
+                throw new Exception("Competition is not found in database by requested id: " . "1");
+            }
+        }
+        catch(MySqlException $e) {
+            //ECL\WebDiagnostics\Console::Error('Find competition by id is failed with error: ' . print_r($e, true));
+            print_r($e);
+            return;
+        }
+        finally{
+            $dbh->Close();
+        }
+
+        $contestInfo->competition = $defaultCompetition;
         $contestInfo->isSubmitted = false;
 
         ECL\WebDiagnostics\Console::Log('Creating view for Contest');

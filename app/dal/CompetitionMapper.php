@@ -10,7 +10,7 @@
 require_once('../app/models/CompetitionModel.php');
 
 /**
- * Implement DataMapper pattern for Competition domain model
+ * Implement DataMapper pattern for CompetitionModel
  * see PEAA, http://martinfowler.com/eaaCatalog/dataMapper.html
  */
 class CompetitionMapper
@@ -21,11 +21,11 @@ class CompetitionMapper
      * CompetitionMapper constructor.
      * @param mixed $dbh <p>database handler</p>
      */
-    public function __constructor($dbh = false)
+    public function __construct($dbh = false)
     {
         if (!$dbh) {
             $dbStage = ''.DB_STAGE;
-            $this->$dbh = new $dbStage;
+            $this->dbh = new $dbStage;
         }
         else {
             $this->dbh = $dbh;
@@ -34,20 +34,20 @@ class CompetitionMapper
 
     /**
      * Return competition with required id from Database.
-     * @param int $compId <p>id of competition</p>
+     * @param int $cmpId <p>competition identifier</p>
      * @return CompetitorModel competition related with required id
      */
-    public function FindByCompId($compId)
+    public function FindByCompId($cmpId)
     {
-        $query = "SELECT * FROM Competition WHERE cmpId = :1";
-        $data = $this->dbh->Prepare($query)->Execute($compId)->FetchAssoc();
+        $query = "SELECT title, description, startDate, endDate FROM Competition WHERE cmpId = :1";
+        $data = $this->dbh->Prepare($query)->Execute($cmpId)->FetchAssoc();
 
         if(!$data) {
             return false;
         }
 
         return new CompetitionModel(
-            $compId,
+            $cmpId,
             $data['title'],
             $data['description'],
             $data['startDate'],

@@ -9,6 +9,9 @@
 
 require_once('../app/dal/Db.php');
 require_once('../app/dal/CompetitionMapper.php');
+require_once('../app/dal/SchoolMapper.php');
+require_once('../app/dal/QuestionMapper.php');
+require_once('../app/dal/ProposedAnswerMapper.php');
 
 /**
  * Controller for processing Content page commands
@@ -34,13 +37,28 @@ class Contest extends Controller
         $dbh = new $dbStage;
 
         try{
+            // Get default competition
             $compMapper = new CompetitionMapper($dbh);
-
             $defaultCompetition = $compMapper->FindByCompId(1);
             if (!$defaultCompetition)
             {
                 throw new Exception("Competition is not found in database by requested id: " . "1");
             }
+
+            // Get school list
+            $schoolMapper = new SchoolMapper($dbh);
+            $schoolList = $schoolMapper->GetSchoolList();
+            ECL\WebDiagnostics\Console::Log('ContestController/index, schoolList: ' . count($schoolList));
+
+            // Get random question
+            $questionMapper = new QuestionMapper($dbh);
+            $randomQuestion = $questionMapper->GetRandomQuestion($defaultCompetition->cmpId);
+
+            // Get question's answers
+            $proposedAnswerMapper = new ProposedAnswerMapper($dbh);
+            $answerList = $proposedAnswerMapper->GetAnswerList($randomQuestion->questionId);
+
+
         }
         catch(MySqlException $e) {
             //ECL\WebDiagnostics\Console::Error('Find competition by id is failed with error: ' . print_r($e, true));
@@ -52,6 +70,9 @@ class Contest extends Controller
         }
 
         $contestInfo->competition = $defaultCompetition;
+        $contestInfo->question = $randomQuestion;
+        $contestInfo->proposedAnswers = $answerList;
+        $contestInfo->schoolList = $schoolList;
         $contestInfo->isSubmitted = false;
 
         ECL\WebDiagnostics\Console::Log('Creating view for Contest');

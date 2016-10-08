@@ -12,9 +12,24 @@
  */
 class ProposedAnswerModel
 {
-    public $answerId = -1;
-    public $questionId = -1;
+    public $answerId;
+    public $questionId;
     //public $question;
-    public $answerText = '';
-    public $isCorrect = 0;
+    public $answerText;
+    public $isCorrect;
+
+    /**
+     * Constructor.
+     * @param int $answerId <p>answer identifier</p>
+     * @param int $questionId <p>question identifier</p>
+     * @param string $answerText <p>answer text</p>
+     * @param int $isCorrect <p>flag which shows if question is correct (1)</p>
+     */
+    public function __construct($answerId, $questionId, $answerText, $isCorrect = 0)
+    {
+        $this->answerId = $answerId;
+        $this->questionId = $questionId;
+        $this->answerText = $answerText;
+        $this->isCorrect = $isCorrect;
+    }
 }

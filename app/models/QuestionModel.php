@@ -12,8 +12,21 @@
  */
 class QuestionModel
 {
-    public $questionId = -1;
-    public $cmpId = -1;
+    public $questionId;
+    public $cmpId;
     //public $competition;
-    public $questionText = '';
+    public $questionText;
+
+    /**
+     * Constructor.
+     * @param int $questionId <p>question identifier</p>
+     * @param string $cmpId <p>competition identifier</p>
+     * @param string $questionText <p>question text</p>
+     */
+    public function __construct($questionId, $cmpId, $questionText)
+    {
+        $this->questionId = $questionId;
+        $this->cmpId = $cmpId;
+        $this->questionText = $questionText;
+    }
 }

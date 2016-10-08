@@ -102,7 +102,7 @@ class DbMySqlStatement implements DbStatement
      * @return mixed instance of class
      * @throws MysqlException if $dbh is not a resource
      */
-    public function DbMysqlStatement($dbh, $query)
+    public function __construct($dbh, $query)
     {
         $this->dbh = $dbh;
         $this->query = $query;
@@ -136,7 +136,6 @@ class DbMySqlStatement implements DbStatement
             throw new MysqlException($this->dbh);
         }
 
-        sprintf('Query: %s, result: $d', $query, $this->result->num_rows);
         echo 'Query: '.$query;
 
         return $this;
@@ -185,7 +184,7 @@ class DbMySql implements DbConnection {
      * @param string $dbhost <p>server name</p>
      * @param string $dbname <p>name of database</p>
      */
-    public function __constructor($user, $pass, $dbhost, $dbname) {
+    public function __construct($user, $pass, $dbhost, $dbname) {
         $this->user = $user;
         $this->pass = $pass;
         $this->dbhost = $dbhost;
@@ -235,14 +234,16 @@ class DbMySql implements DbConnection {
             throw new MysqlException($this->dbh);
         }
 
-        if(!is_resource($ret)) {
-            return TRUE;
-        }
-        else {
+        echo 'Query: '.$query;
+
+//        if(!is_resource($ret)) {
+//            return TRUE;
+//        }
+//        else {
             $stmt = new DbMySqlStatement($this->dbh, $query);
             $stmt->result = $ret;
             return $stmt;
-        }
+//        }
     }
 
     public function Prepare($query)

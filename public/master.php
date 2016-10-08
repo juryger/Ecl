@@ -89,6 +89,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../public/js/ecl.js"></script>
     <script src="../public/js/jquery-3.1.0.min.js"></script>
     <script>window.jQuery</script>
     <script src="../public/js/bootstrap.min.js"></script>

@@ -23,9 +23,14 @@ class ContestModel
     public $question;
 
     /**
-     * @var SchoolModel selected school.
+     * @var ProposedAnswerModel array of answers for selected question.
      */
-    public $school;
+    public $proposedAnswers;
+
+    /**
+     * @var SchoolModel array of schools.
+     */
+    public $schoolList;
 
     /**
      * @var CompetitorModel current competitor.
@@ -33,9 +38,14 @@ class ContestModel
     public $competitor;
 
     /**
-     * @var CompetitionResponseModel competitor's response on selected question
+     * @var SchoolModel selected school.
      */
-    public $competitonResponse;
+    public $selectedSchool;
+
+    /**
+     * @var ProposedAnswerModel competitor's response on selected question
+     */
+    public $selectedAnswer;
 
     /**
      * @var bool Flag that show does competitor has sent his answer on question.

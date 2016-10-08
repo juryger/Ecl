@@ -12,7 +12,7 @@
  */
 class CompetitionModel
 {
-    public $compId;
+    public $cmpId;
     public $title;
     public $description;
     public $startDate;
@@ -20,16 +20,15 @@ class CompetitionModel
 
     /**
      * Constructor.
-     * @param int $compId
-     * @param string $title
-     * @param string $description
-     * @param date $startDate
-     * @param date $endDate
-     * @return mixed Instance of class
+     * @param int $cmpId <p>competition identifier</p>
+     * @param string $title <p>title</p>
+     * @param string $description <p><description/p>
+     * @param date $startDate <p>start of competition</p>
+     * @param date $endDate <p>end of competition</p>
      */
-    public function CompetitionModel($compId, $title, $description, $startDate, $endDate)
+    public function __construct($cmpId, $title, $description, $startDate, $endDate)
     {
-        $this->compId = $compId;
+        $this->cmpId = $cmpId;
         $this->title = $title;
         $this->description = $description;
         $this->startDate = $startDate;

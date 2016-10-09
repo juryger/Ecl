@@ -43,9 +43,14 @@ class ContestModel
     public $selectedSchool;
 
     /**
-     * @var ProposedAnswerModel competitor's response on selected question
+     * @var ProposedAnswerModel selected answer for random question
      */
     public $selectedAnswer;
+
+    /**
+     * @var CompetitionResponseModel competition response
+     */
+    public $response;
 
     /**
      * @var bool Flag that show does competitor has sent his answer on question.

@@ -26,7 +26,7 @@ interface DbStatement {
     public function BindParam($key, $value);
 
     /**
-     * Return one row after executing statement.
+     * Return one row after executing query.
      * @return mixed
      */
     public function FetchRow();
@@ -79,6 +79,12 @@ interface DbConnection {
      * @return bool
      */
     public function IsConnected();
+
+    /**
+     * Return last inserted autoincrement identifier
+     * @return int autoincrement identifier.
+     */
+    public function LastInsertedId();
 }
 
 /**
@@ -135,8 +141,6 @@ class DbMySqlStatement implements DbStatement
         if (!$this->result) {
             throw new MysqlException($this->dbh);
         }
-
-        echo 'Query: '.$query;
 
         return $this;
     }
@@ -234,16 +238,9 @@ class DbMySql implements DbConnection {
             throw new MysqlException($this->dbh);
         }
 
-        echo 'Query: '.$query;
-
-//        if(!is_resource($ret)) {
-//            return TRUE;
-//        }
-//        else {
-            $stmt = new DbMySqlStatement($this->dbh, $query);
-            $stmt->result = $ret;
-            return $stmt;
-//        }
+        $stmt = new DbMySqlStatement($this->dbh, $query);
+        $stmt->result = $ret;
+        return $stmt;
     }
 
     public function Prepare($query)
@@ -254,12 +251,17 @@ class DbMySql implements DbConnection {
 
         return new DbMySqlStatement($this->dbh, $query);
     }
+
+    public function LastInsertedId()
+    {
+        return mysqli_insert_id($this->dbh);
+    }
 }
 
 class DbMySqlTest extends DbMySql {
     protected $dbhost = "127.0.0.1";
     protected $user   = "root";
-    protected $pass   = "tpcbygat24";
+    protected $pass   = "";
     protected $dbname = "contest";
 
     public function __construct() { }
@@ -267,7 +269,7 @@ class DbMySqlTest extends DbMySql {
 
 class DbMySqlProd extends DbMySql {
     protected $user   = "iuri668sql";
-    protected $pass   = "Iuri34544";
+    protected $pass   = "";
     protected $dbhost = "128.199.211.172";
     protected $dbname = "iuri668db";
 

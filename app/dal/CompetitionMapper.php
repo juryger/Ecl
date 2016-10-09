@@ -15,20 +15,20 @@ require_once('../app/models/CompetitionModel.php');
  */
 class CompetitionMapper
 {
-    private $dbh;
+    private $db;
 
     /**
      * CompetitionMapper constructor.
-     * @param mixed $dbh <p>database handler</p>
+     * @param mixed $db <p>database connection</p>
      */
-    public function __construct($dbh = false)
+    public function __construct($db = false)
     {
-        if (!$dbh) {
+        if (!$db) {
             $dbStage = ''.DB_STAGE;
-            $this->dbh = new $dbStage;
+            $this->db = new $dbStage;
         }
         else {
-            $this->dbh = $dbh;
+            $this->db = $db;
         }
     }
 
@@ -40,7 +40,7 @@ class CompetitionMapper
     public function FindByCompId($cmpId)
     {
         $query = "SELECT title, description, startDate, endDate FROM Competition WHERE cmpId = :1";
-        $data = $this->dbh->Prepare($query)->Execute($cmpId)->FetchAssoc();
+        $data = $this->db->Prepare($query)->Execute($cmpId)->FetchAssoc();
 
         if(!$data) {
             return false;

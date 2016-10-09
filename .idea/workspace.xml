@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d17d0bdf-f6fb-4c76-9603-7fa39e928145" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dal/QuestionMapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dal/SchoolMapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/ecl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dal/CompetitionResponseMapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dal/CompetitorMapper.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/core/DBConnection.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Contest.php" afterPath="$PROJECT_DIR$/app/controllers/Contest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dal/CompetitionMapper.php" afterPath="$PROJECT_DIR$/app/dal/CompetitionMapper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dal/Db.php" afterPath="$PROJECT_DIR$/app/dal/Db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CompetitionModel.php" afterPath="$PROJECT_DIR$/app/models/CompetitionModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CompetitorModel.php" afterPath="$PROJECT_DIR$/app/models/CompetitorModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php" afterPath="$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dal/QuestionMapper.php" afterPath="$PROJECT_DIR$/app/dal/QuestionMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dal/SchoolMapper.php" afterPath="$PROJECT_DIR$/app/dal/SchoolMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CompetitionResponseModel.php" afterPath="$PROJECT_DIR$/app/models/CompetitionResponseModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ContestModel.php" afterPath="$PROJECT_DIR$/app/models/ContestModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ProposedAnswerModel.php" afterPath="$PROJECT_DIR$/app/models/ProposedAnswerModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/QuestionModel.php" afterPath="$PROJECT_DIR$/app/models/QuestionModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/SchoolModel.php" afterPath="$PROJECT_DIR$/app/models/SchoolModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contest/index.php" afterPath="$PROJECT_DIR$/app/views/contest/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/master.php" afterPath="$PROJECT_DIR$/public/master.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ecl.js" afterPath="$PROJECT_DIR$/public/js/ecl.js" />
     </list>
     <ignored path="ECHL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,45 +39,31 @@
       <file leaf-file-name="Contest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Contest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="58" column="62" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="62" />
+            <state relative-caret-position="1068">
+              <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
               <folding>
-                <element signature="n#Submit#0;n#Contest#0;n#!!top" expanded="true" />
+                <element signature="n#Index#0;n#Contest#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/contest/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
               <folding>
-                <marker date="1475919794762" expanded="true" signature="1627:1661" ph="..." />
-                <marker date="1475919794762" expanded="true" signature="1748:1789" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContestModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/ContestModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="27" column="27" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Console.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-              <folding>
-                <element signature="e#370#481#0#PHP" expanded="true" />
+                <element signature="e#3086#3107#0#HTML" expanded="true" />
+                <element signature="e#3229#3235#0#HTML" expanded="true" />
+                <element signature="e#3351#3357#0#HTML" expanded="true" />
+                <element signature="e#3460#3466#0#HTML" expanded="true" />
+                <element signature="e#3585#3591#0#HTML" expanded="true" />
+                <element signature="e#3712#3718#0#HTML" expanded="true" />
+                <element signature="e#3830#3836#0#HTML" expanded="true" />
+                <element signature="e#3937#3956#0#HTML" expanded="true" />
+                <marker date="1476014773324" expanded="true" signature="1927:1987" ph="..." />
+                <marker date="1476014773324" expanded="true" signature="2123:2164" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,50 +72,26 @@
       <file leaf-file-name="QuestionMapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/dal/QuestionMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="213">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="true" />
                 <element signature="n#__construct#0;n#QuestionMapper#0;n#!!top" expanded="true" />
-                <marker date="1475917431727" expanded="true" signature="869:950" ph="SELECT quest... Question" />
-                <marker date="1475917431727" expanded="true" signature="869:951" ph="SELECT quest... Question" />
+                <element signature="n#GetRandomQuestion#0;n#QuestionMapper#0;n#!!top" expanded="true" />
+                <element signature="n#GetQuestion#0;n#QuestionMapper#0;n#!!top" expanded="true" />
+                <marker date="1476011911820" expanded="true" signature="865:946" ph="SELECT quest... Question" />
+                <marker date="1476011911820" expanded="true" signature="865:947" ph="SELECT quest... Question" />
+                <marker date="1476011911820" expanded="true" signature="1462:1524" ph="SELECT cmpId... question" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProposedAnswerMapper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php">
+      <file leaf-file-name="ContestModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ContestModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="42" column="89" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
-              <folding>
-                <element signature="e#7#91#0#PHP" expanded="true" />
-                <element signature="n#__construct#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
-                <marker date="1475918790685" expanded="true" signature="898:969" ph="SELECT answe... proposed_answer" />
-                <marker date="1475918790685" expanded="true" signature="898:991" ph="SELECT answe... proposed_answer" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ecl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/ecl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="94" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
-              <folding>
-                <element signature="n#!!doc;n#onSchoolSelected#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="master.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/master.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+            <state relative-caret-position="235">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -140,39 +100,73 @@
       <file leaf-file-name="SchoolMapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/dal/SchoolMapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="740">
+              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
               <folding>
                 <element signature="e#7#92#0#PHP" expanded="true" />
                 <element signature="n#__construct#0;n#SchoolMapper#0;n#!!top" expanded="true" />
                 <element signature="n#GetSchoolList#0;n#SchoolMapper#0;n#!!top" expanded="true" />
-                <marker date="1475917958752" expanded="true" signature="793:833" ph="SELECT schoo... School" />
+                <element signature="n#UpdateSchoolPhoneNumber#0;n#SchoolMapper#0;n#!!top" expanded="true" />
+                <marker date="1476012104387" expanded="true" signature="789:829" ph="SELECT schoo... School" />
+                <marker date="1476012104387" expanded="true" signature="1370:1377" ph="UPDATE schoo... " />
+                <marker date="1476012104387" expanded="true" signature="1370:1418" ph="UPDATE schoo... " />
+                <marker date="1476012104387" expanded="true" signature="1720:1770" ph="SELECT name,... school" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Db.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProposedAnswerMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="75" selection-end-column="32" />
+              <folding>
+                <element signature="n#__construct#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
+                <element signature="n#GetAnswerList#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
+                <marker date="1476011816715" expanded="true" signature="902:973" ph="SELECT answe... proposed_answer" />
+                <marker date="1476011816715" expanded="true" signature="902:995" ph="SELECT answe... proposed_answer" />
+                <marker date="1476011816715" expanded="true" signature="1668:1749" ph="SELECT answe... proposed_answer" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompetitionMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/dal/CompetitionMapper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="53" selection-end-column="30" />
+              <folding>
+                <element signature="n#__construct#0;n#CompetitionMapper#0;n#!!top" expanded="true" />
+                <marker date="1476008544077" expanded="true" signature="899:978" ph="SELECT * FRO... Competition" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/dal/Db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+            <state relative-caret-position="196">
+              <caret line="263" column="25" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
               <folding>
                 <element signature="n#DbStatement#0;n#!!top" expanded="true" />
                 <element signature="n#DbConnection#0;n#!!top" expanded="true" />
-                <element signature="n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#__construct#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#BindParam#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#Execute#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#FetchRow#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#FetchAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
                 <element signature="n#FetchAllAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+                <element signature="n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#__construct#0;n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#IsConnected#0;n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#Connect#0;n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#Close#0;n#DbMySql#0;n#!!top" expanded="true" />
+                <element signature="n#Execute#0;n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#Prepare#0;n#DbMySql#0;n#!!top" expanded="true" />
-                <element signature="n#DbMySqlTest#0;n#!!top" expanded="true" />
+                <element signature="n#LastInsertedId#0;n#DbMySql#0;n#!!top" expanded="true" />
                 <element signature="n#DbMySqlProd#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -194,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/home/banana.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/views/home/Inro.php" />
         <option value="$PROJECT_DIR$/app/models/User.php" />
         <option value="$PROJECT_DIR$/app/models/ActivePage.php" />
@@ -223,28 +215,30 @@
         <option value="$PROJECT_DIR$/app/views/home/index.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/app/dal/ContestMapper.php" />
-        <option value="$PROJECT_DIR$/app/models/CompetitionResponseModel.php" />
         <option value="$PROJECT_DIR$/app/dal/DB.php" />
         <option value="$PROJECT_DIR$/app/core/App.php" />
         <option value="$PROJECT_DIR$/app/init.php" />
         <option value="$PROJECT_DIR$/app/core/DbConnection.php" />
         <option value="$PROJECT_DIR$/app/exceptions/MySqlException.php" />
         <option value="$PROJECT_DIR$/app/dal/DataMapper.php" />
-        <option value="$PROJECT_DIR$/app/models/ContestModel.php" />
         <option value="$PROJECT_DIR$/app/models/CompetitionModel.php" />
-        <option value="$PROJECT_DIR$/app/dal/CompetitionMapper.php" />
         <option value="$PROJECT_DIR$/app/models/CompetitorModel.php" />
         <option value="$PROJECT_DIR$/app/models/ProposedAnswerModel.php" />
         <option value="$PROJECT_DIR$/app/models/QuestionModel.php" />
         <option value="$PROJECT_DIR$/app/models/SchoolModel.php" />
-        <option value="$PROJECT_DIR$/app/dal/Db.php" />
-        <option value="$PROJECT_DIR$/app/dal/QuestionMapper.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Contest.php" />
-        <option value="$PROJECT_DIR$/app/dal/SchoolMapper.php" />
-        <option value="$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php" />
         <option value="$PROJECT_DIR$/public/master.php" />
         <option value="$PROJECT_DIR$/public/js/ecl.js" />
+        <option value="$PROJECT_DIR$/app/dal/CompetitionMapper.php" />
+        <option value="$PROJECT_DIR$/app/dal/CompetitorMapper.php" />
+        <option value="$PROJECT_DIR$/app/models/CompetitionResponseModel.php" />
+        <option value="$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php" />
+        <option value="$PROJECT_DIR$/app/dal/QuestionMapper.php" />
+        <option value="$PROJECT_DIR$/app/dal/SchoolMapper.php" />
+        <option value="$PROJECT_DIR$/app/models/ContestModel.php" />
+        <option value="$PROJECT_DIR$/app/dal/CompetitionResponseMapper.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Contest.php" />
         <option value="$PROJECT_DIR$/app/views/contest/index.php" />
+        <option value="$PROJECT_DIR$/app/dal/Db.php" />
       </list>
     </option>
   </component>
@@ -352,24 +346,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ECHL">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -473,6 +449,114 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="contest" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ecl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ecl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exceptions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ecl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dal" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ecl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ECL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ecl" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ECHL">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -637,12 +721,13 @@
       <workItem from="1475626167593" duration="1936000" />
       <workItem from="1475630622893" duration="5062000" />
       <workItem from="1475701881897" duration="17728000" />
-      <workItem from="1475875667394" duration="27350000" />
+      <workItem from="1475875667394" duration="27476000" />
+      <workItem from="1475976501628" duration="21076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197638000" />
+    <option name="totallyTimeSpent" value="218840000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,14 +740,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15938166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33186328" sideWeight="0.50437635" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33076075" sideWeight="0.49562362" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33076075" sideWeight="0.49562362" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -674,6 +758,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -691,19 +776,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.htaccess" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="575" column="0" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -829,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/exceptions/MySqlException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -863,14 +932,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/DataMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/DataMapper.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -895,28 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/DbConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="26" />
-          <folding>
-            <element signature="n#query#0;n#DbConnection#0;n#!!top" expanded="true" />
-            <element signature="n#lastCount#0;n#DbConnection#0;n#!!top" expanded="true" />
-            <element signature="n#DbConnection#0;n#DbConnection#0;n#!!top" expanded="true" />
-            <element signature="n#next#0;n#DbConnection#0;n#!!top" expanded="true" />
-            <element signature="n#free#0;n#DbConnection#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/CompetitionResponseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -929,31 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="63" column="25" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="25" />
-          <folding>
-            <element signature="n#parseUrlPath#0;n#App#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/CompetitionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="n#__construct#0;n#CompetitionModel#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/CompetitionMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="n#__construct#0;n#CompetitionMapper#0;n#!!top" expanded="true" />
-            <element signature="n#FindByCompId#0;n#CompetitionMapper#0;n#!!top" expanded="true" />
-            <marker date="1475916019159" expanded="true" signature="903:982" ph="SELECT * FRO... Competition" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,7 +987,7 @@
         <state relative-caret-position="340">
           <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="n#__construct#0;n#QuestionModel#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#QuestionModel#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,55 +1000,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/CompetitorModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="n#__construct#0;n#CompetitorModel#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-          <folding>
-            <element signature="n#DbStatement#0;n#!!top" expanded="true" />
-            <element signature="n#DbConnection#0;n#!!top" expanded="true" />
-            <element signature="n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#__construct#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#BindParam#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#Execute#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#FetchRow#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#FetchAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#FetchAllAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
-            <element signature="n#__construct#0;n#DbMySql#0;n#!!top" expanded="true" />
-            <element signature="n#IsConnected#0;n#DbMySql#0;n#!!top" expanded="true" />
-            <element signature="n#Connect#0;n#DbMySql#0;n#!!top" expanded="true" />
-            <element signature="n#Close#0;n#DbMySql#0;n#!!top" expanded="true" />
-            <element signature="n#Prepare#0;n#DbMySql#0;n#!!top" expanded="true" />
-            <element signature="n#DbMySqlTest#0;n#!!top" expanded="true" />
-            <element signature="n#DbMySqlProd#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ContestModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <element signature="e#370#481#0#PHP" expanded="true" />
+            <element signature="e#370#481#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,58 +1018,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/SchoolMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#92#0#PHP" expanded="true" />
-            <element signature="n#__construct#0;n#SchoolMapper#0;n#!!top" expanded="true" />
-            <element signature="n#GetSchoolList#0;n#SchoolMapper#0;n#!!top" expanded="true" />
-            <marker date="1475917958752" expanded="true" signature="793:833" ph="SELECT schoo... School" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/QuestionMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="true" />
-            <element signature="n#__construct#0;n#QuestionMapper#0;n#!!top" expanded="true" />
-            <marker date="1475917431727" expanded="true" signature="869:950" ph="SELECT quest... Question" />
-            <marker date="1475917431727" expanded="true" signature="869:951" ph="SELECT quest... Question" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Contest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="58" column="62" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="62" />
-          <folding>
-            <element signature="n#Submit#0;n#Contest#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="42" column="89" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="true" />
-            <element signature="n#__construct#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
-            <marker date="1475918790685" expanded="true" signature="898:969" ph="SELECT answe... proposed_answer" />
-            <marker date="1475918790685" expanded="true" signature="898:991" ph="SELECT answe... proposed_answer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/master.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
+        <state relative-caret-position="1547">
           <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
           <folding />
         </state>
@@ -1105,21 +1028,204 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/ecl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="94" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
+        <state relative-caret-position="391">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/exceptions/MySqlException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/DbConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CompetitorModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="49" />
           <folding>
-            <element signature="n#!!doc;n#onSchoolSelected#0" expanded="false" />
+            <element signature="n#__construct#0;n#CompetitorModel#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/CompetitorMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#92#0#PHP" expanded="true" />
+            <element signature="n#CompetitorMapper#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#CompetitorMapper#0;n#!!top" expanded="true" />
+            <marker date="1476009834718" expanded="true" signature="981:1030" ph="SELECT count... competitor" />
+            <marker date="1476009834718" expanded="true" signature="981:1041" ph="SELECT count... competitor" />
+            <marker date="1476009834718" expanded="true" signature="981:1065" ph="SELECT cmrId... competitor" />
+            <marker date="1476009834718" expanded="true" signature="1372:1444" ph="INSERT INTO competitor... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CompetitionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="n#__construct#0;n#CompetitionModel#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/CompetitionMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="n#__construct#0;n#CompetitionMapper#0;n#!!top" expanded="true" />
+            <marker date="1476008544077" expanded="true" signature="899:978" ph="SELECT * FRO... Competition" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/QuestionMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#91#0#PHP" expanded="true" />
+            <element signature="n#__construct#0;n#QuestionMapper#0;n#!!top" expanded="true" />
+            <element signature="n#GetRandomQuestion#0;n#QuestionMapper#0;n#!!top" expanded="true" />
+            <element signature="n#GetQuestion#0;n#QuestionMapper#0;n#!!top" expanded="true" />
+            <marker date="1476011911820" expanded="true" signature="865:946" ph="SELECT quest... Question" />
+            <marker date="1476011911820" expanded="true" signature="865:947" ph="SELECT quest... Question" />
+            <marker date="1476011911820" expanded="true" signature="1462:1524" ph="SELECT cmpId... question" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/SchoolMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding>
+            <element signature="e#7#92#0#PHP" expanded="true" />
+            <element signature="n#__construct#0;n#SchoolMapper#0;n#!!top" expanded="true" />
+            <element signature="n#GetSchoolList#0;n#SchoolMapper#0;n#!!top" expanded="true" />
+            <element signature="n#UpdateSchoolPhoneNumber#0;n#SchoolMapper#0;n#!!top" expanded="true" />
+            <marker date="1476012104387" expanded="true" signature="789:829" ph="SELECT schoo... School" />
+            <marker date="1476012104387" expanded="true" signature="1370:1377" ph="UPDATE schoo... " />
+            <marker date="1476012104387" expanded="true" signature="1370:1418" ph="UPDATE schoo... " />
+            <marker date="1476012104387" expanded="true" signature="1720:1770" ph="SELECT name,... school" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ContestModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CompetitionResponseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="n#__construct#0;n#CompetitionResponseModel#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Contest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1068">
+          <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
+          <folding>
+            <element signature="n#Index#0;n#Contest#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contest/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding>
-            <marker date="1475919794762" expanded="true" signature="1627:1661" ph="..." />
-            <marker date="1475919794762" expanded="true" signature="1748:1789" ph="..." />
+            <element signature="e#3086#3107#0#HTML" expanded="true" />
+            <element signature="e#3229#3235#0#HTML" expanded="true" />
+            <element signature="e#3351#3357#0#HTML" expanded="true" />
+            <element signature="e#3460#3466#0#HTML" expanded="true" />
+            <element signature="e#3585#3591#0#HTML" expanded="true" />
+            <element signature="e#3712#3718#0#HTML" expanded="true" />
+            <element signature="e#3830#3836#0#HTML" expanded="true" />
+            <element signature="e#3937#3956#0#HTML" expanded="true" />
+            <marker date="1476014773324" expanded="true" signature="1927:1987" ph="..." />
+            <marker date="1476014773324" expanded="true" signature="2123:2164" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/CompetitionResponseMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="n#__construct#0;n#CompetitionResponseMapper#0;n#!!top" expanded="true" />
+            <marker date="1476013961466" expanded="true" signature="1062:1146" ph="SELECT cmrId... competitor" />
+            <marker date="1476013961466" expanded="true" signature="1531:1607" ph="INSERT INTO competitor... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/ProposedAnswerMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="75" selection-end-column="32" />
+          <folding>
+            <element signature="n#__construct#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
+            <element signature="n#GetAnswerList#0;n#ProposedAnswerMapper#0;n#!!top" expanded="true" />
+            <marker date="1476011816715" expanded="true" signature="902:973" ph="SELECT answe... proposed_answer" />
+            <marker date="1476011816715" expanded="true" signature="902:995" ph="SELECT answe... proposed_answer" />
+            <marker date="1476011816715" expanded="true" signature="1668:1749" ph="SELECT answe... proposed_answer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dal/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="263" column="25" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
+          <folding>
+            <element signature="n#DbStatement#0;n#!!top" expanded="true" />
+            <element signature="n#DbConnection#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#BindParam#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#Execute#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#FetchRow#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#FetchAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#FetchAllAssoc#0;n#DbMySqlStatement#0;n#!!top" expanded="true" />
+            <element signature="n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#__construct#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#IsConnected#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#Connect#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#Close#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#Execute#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#Prepare#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#LastInsertedId#0;n#DbMySql#0;n#!!top" expanded="true" />
+            <element signature="n#DbMySqlProd#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

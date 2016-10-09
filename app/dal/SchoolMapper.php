@@ -15,20 +15,20 @@ require_once('../app/models/SchoolModel.php');
  */
 class SchoolMapper
 {
-    private $dbh;
+    private $db;
 
     /**
      * Constructor.
-     * @param mixed $dbh <p>database handler</p>
+     * @param mixed $db <p>database connection</p>
      */
-    public function __construct($dbh = false)
+    public function __construct($db = false)
     {
-        if (!$dbh) {
+        if (!$db) {
             $dbStage = ''.DB_STAGE;
-            $this->dbh = new $dbStage;
+            $this->db = new $dbStage;
         }
         else {
-            $this->dbh = $dbh;
+            $this->db = $db;
         }
     }
 
@@ -39,7 +39,7 @@ class SchoolMapper
     public function GetSchoolList()
     {
         $query = "SELECT schoolId, name, phone FROM school";
-        $schoolList = $this->dbh->Execute($query)->FetchAllAssoc();
+        $schoolList = $this->db->Execute($query)->FetchAllAssoc();
 
         $result = [];
         foreach($schoolList as $school) {
@@ -47,5 +47,36 @@ class SchoolMapper
         }
 
         return $result;
+    }
+
+    /**
+     * Update school phone number.
+     * @param int $schoolId <p>school identifier</p>
+     * @param string $phoneNumber <p>school phone number</p>
+     */
+    public function UpdateSchoolPhoneNumber($schoolId, $phoneNumber)
+    {
+        $query = "UPDATE school SET phone = :1 WHERE schoolId = :2";
+        $this->db->Prepare($query)->Execute($phoneNumber, $schoolId);
+    }
+
+    /**
+     * Return required school from database.
+     * @param int $schoolId <p>school identifier</p>
+     * @return SchoolModel required school
+     */
+    public function GetSchool($schoolId)
+    {
+        $query = "SELECT name, phone FROM school WHERE schoolId = :1";
+        $data = $this->db->Prepare($query)->Execute($schoolId)->FetchAssoc();
+
+        if(!$data) {
+            return false;
+        }
+
+        return new SchoolModel(
+            $schoolId,
+            $data['name'],
+            $data['phone']);
     }
 }

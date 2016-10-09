@@ -19,4 +19,22 @@ class CompetitionResponseModel
     public $answerId = -1;
     //public answer;
     public $entryDate;
+    public $isAlreadyRegistered;
+
+    /**
+     * Constructor.
+     * @param int $cmpId <p>competition identifier</p>
+     * @param int $cmrId <p>competitor identifier</p>
+     * @param int $answerId <p>answer identifier</p>
+     * @param date $entryDate <p>date of taking part of competitor in competition</p>
+     */
+    public function __construct($cmpId, $cmrId, $answerId, $entryDate)
+    {
+        $this->isAlreadyRegistered = false;
+
+        $this->cmpId = $cmpId;
+        $this->cmrId = $cmrId;
+        $this->answerId = $answerId;
+        $this->entryDate = $entryDate;
+    }
 }

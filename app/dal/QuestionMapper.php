@@ -15,20 +15,20 @@ require_once('../app/models/QuestionModel.php');
  */
 class QuestionMapper
 {
-    private $dbh;
+    private $db;
 
     /**
      * Constructor.
-     * @param mixed $dbh <p>database handler</p>
+     * @param mixed $db <p>database connection</p>
      */
-    public function __construct($dbh = false)
+    public function __construct($db = false)
     {
-        if (!$dbh) {
+        if (!$db) {
             $dbStage = ''.DB_STAGE;
-            $this->dbh = new $dbStage;
+            $this->db = new $dbStage;
         }
         else {
-            $this->dbh = $dbh;
+            $this->db = $db;
         }
     }
 
@@ -40,7 +40,7 @@ class QuestionMapper
     public function GetRandomQuestion($cmpId)
     {
         $query = "SELECT questionId, questionText FROM Question WHERE cmpId = :1 and questionId = :2";
-        $data = $this->dbh->Prepare($query)->Execute($cmpId, rand(1, 5))->FetchAssoc();
+        $data = $this->db->Prepare($query)->Execute($cmpId, rand(1, 5))->FetchAssoc();
 
         if(!$data) {
             return false;
@@ -49,6 +49,26 @@ class QuestionMapper
         return new QuestionModel(
             $data['questionId'],
             $cmpId,
+            $data['questionText']);
+    }
+
+    /**
+     * Return required question from database.
+     * @param int $questionId <p>question identifier</p>
+     * @return QuestionModel required question
+     */
+    public function GetQuestion($questionId)
+    {
+        $query = "SELECT cmpId, questionText FROM question WHERE questionId = :1";
+        $data = $this->db->Prepare($query)->Execute($questionId)->FetchAssoc();
+
+        if(!$data) {
+            return false;
+        }
+
+        return new QuestionModel(
+            $questionId,
+            $data['cmpId'],
             $data['questionText']);
     }
 }

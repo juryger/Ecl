@@ -1,4 +1,211 @@
-# school list obtained from http://www.educationcounts.govt.nz/data-services/directories/list-of-nz-schools
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 10, 2016 at 10:38 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `contest`
+--
+CREATE DATABASE IF NOT EXISTS `contest` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `contest`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `competition`
+--
+-- Creation: Aug 25, 2016 at 11:00 PM
+--
+
+DROP TABLE IF EXISTS `competition`;
+CREATE TABLE IF NOT EXISTS `competition` (
+  `cmpId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id (auto-increment)',
+  `title` varchar(255) NOT NULL COMMENT 'name of competition',
+  `description` varchar(4000) DEFAULT NULL COMMENT 'description of competition',
+  `startDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'date of competition start ',
+  `endDate` datetime NOT NULL COMMENT 'date of competition end',
+  PRIMARY KEY (`cmpId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Таблица сорвевнований';
+
+--
+-- RELATIONS FOR TABLE `competition`:
+--
+
+--
+-- Dumping data for table `competition`
+--
+
+INSERT INTO `competition` (`title`, `description`, `startDate`, `endDate`) VALUES('Spring flowers competition 2016', 'The quiz of spring flowers knowledge wiht valueable prizes - high performance computer class!!!', '2016-10-10 00:00:00', '2016-10-14 23:59:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `competition_response`
+--
+-- Creation: Sep 23, 2016 at 12:23 AM
+--
+
+DROP TABLE IF EXISTS `competition_response`;
+CREATE TABLE IF NOT EXISTS `competition_response` (
+  `cmpId` int(11) NOT NULL,
+  `cmrId` int(11) NOT NULL,
+  `answerId` int(11) NOT NULL,
+  `entryDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cmpId`,`cmrId`,`answerId`,`entryDate`),
+  KEY `FK_COMPETITION_ID` (`cmpId`),
+  KEY `FK_COMPETITIOR_ID` (`cmrId`),
+  KEY `FK_PROPOSED_ANSWER_ID` (`answerId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- RELATIONS FOR TABLE `competition_response`:
+--   `cmpId`
+--       `competition` -> `cmpId`
+--   `cmrId`
+--       `competitor` -> `cmrId`
+--   `answerId`
+--       `proposed_answer` -> `answerId`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `competitor`
+--
+-- Creation: Aug 25, 2016 at 10:58 PM
+--
+
+DROP TABLE IF EXISTS `competitor`;
+CREATE TABLE IF NOT EXISTS `competitor` (
+  `cmrId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id (auto-increment)',
+  `schoolId` int(11) NOT NULL COMMENT 'foreign key to school',
+  `email` varchar(255) NOT NULL COMMENT 'personal email',
+  `classNumber` varchar(5) NOT NULL COMMENT 'of school',
+  PRIMARY KEY (`cmrId`),
+  KEY `FK_SHCOOL_ID` (`schoolId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- RELATIONS FOR TABLE `competitor`:
+--   `schoolId`
+--       `school` -> `schoolId`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `question`
+--
+-- Creation: Aug 25, 2016 at 11:22 PM
+--
+
+DROP TABLE IF EXISTS `question`;
+CREATE TABLE IF NOT EXISTS `question` (
+  `questionId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id (auto-increment)',
+  `cmpId` int(11) NOT NULL COMMENT 'foreign key to competition',
+  `questionText` text NOT NULL COMMENT 'question text',
+  PRIMARY KEY (`questionId`),
+  KEY `FK_CMP_ID` (`cmpId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='questions for competition';
+
+--
+-- RELATIONS FOR TABLE `question`:
+--   `cmpId`
+--       `competition` -> `cmpId`
+--
+
+--
+-- Dumping data for table `question`
+--
+
+INSERT INTO `question` (`cmpId`, `questionText`) VALUES(1, 'Which main colors daffodil petals have?');
+INSERT INTO `question` (`cmpId`, `questionText`) VALUES(1, 'For how long magnolia tree usually blossom?');
+INSERT INTO `question` (`cmpId`, `questionText`) VALUES(1, 'What month mimosa usually start blossom at?');
+INSERT INTO `question` (`cmpId`, `questionText`) VALUES(1, 'How often apple trees may produce harvest?');
+INSERT INTO `question` (`cmpId`, `questionText`) VALUES(1, 'What is most frequen type of tree in NZ?');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `proposed_answer`
+--
+-- Creation: Aug 25, 2016 at 11:26 PM
+--
+
+DROP TABLE IF EXISTS `proposed_answer`;
+CREATE TABLE IF NOT EXISTS `proposed_answer` (
+  `answerId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id (auto-increment)',
+  `questionId` int(11) NOT NULL COMMENT 'foreign key to question',
+  `answerText` text NOT NULL COMMENT 'answer text',
+  `isCorrect` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'flag indicating correct answer',
+  PRIMARY KEY (`answerId`),
+  KEY `FK_QUESTION_ID` (`questionId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- RELATIONS FOR TABLE `proposed_answer`:
+--   `questionId`
+--       `question` -> `questionId`
+--
+
+--
+-- Dumping data for table `proposed_answer`
+--
+
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(1, 'grass-coloured', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(1, 'straw-coloured', 1);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(1, 'white and yellow', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(2, 'two and half weeks', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(2, 'tree weeks', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(2, '1 week', 1);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(3, 'July-August', 1);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(3, 'February-March', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(3, 'September', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(4, 'twice a year', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(4, 'once a year', 1);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(4, 'every year', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(5, 'Palm tree', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(5, 'Magnolia', 0);
+INSERT INTO `proposed_answer` (`questionId`, `answerText`, `isCorrect`) VALUES(5, 'Pine', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `school`
+--
+-- Creation: Aug 25, 2016 at 11:02 PM
+--
+
+DROP TABLE IF EXISTS `school`;
+CREATE TABLE IF NOT EXISTS `school` (
+  `schoolId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id (auto-increment)',
+  `name` varchar(255) NOT NULL COMMENT 'name of the school',
+  `phone` varchar(15) NOT NULL COMMENT 'public phone number',
+  PRIMARY KEY (`schoolId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- RELATIONS FOR TABLE `school`:
+--
+
+--
+-- Dumping data for table `school`
+--
+
 INSERT INTO `school`(`name`, `phone`) VALUES ('Te Kao School', '09 4097813');
 INSERT INTO `school`(`name`, `phone`) VALUES ('Taipa Area School', '09 4060159');
 INSERT INTO `school`(`name`, `phone`) VALUES ('Kaitaia College', '09 4080190');
@@ -2536,3 +2743,38 @@ INSERT INTO `school`(`name`, `phone`) VALUES ('Haeata Community Campus (Proposed
 INSERT INTO `school`(`name`, `phone`) VALUES ('Ormiston Junior College (Proposed open date: 30 Jan 2017 )', '');
 INSERT INTO `school`(`name`, `phone`) VALUES ('Holy Trinity Catholic Primary School (Proposed open date: 30 Jan 2017 )', '');
 INSERT INTO `school`(`name`, `phone`) VALUES ('Lemonwood Grove School (Proposed open date: 30 Jan 2017 )', '');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `competition_response`
+--
+ALTER TABLE `competition_response`
+  ADD CONSTRAINT `competition_response_ibfk_1` FOREIGN KEY (`cmpId`) REFERENCES `competition` (`cmpId`),
+  ADD CONSTRAINT `competition_response_ibfk_2` FOREIGN KEY (`cmrId`) REFERENCES `competitor` (`cmrId`),
+  ADD CONSTRAINT `competition_response_ibfk_3` FOREIGN KEY (`answerId`) REFERENCES `proposed_answer` (`answerId`);
+
+--
+-- Constraints for table `competitor`
+--
+ALTER TABLE `competitor`
+  ADD CONSTRAINT `FK_CONSTRAINTS_SCHOOL_ID` FOREIGN KEY (`schoolId`) REFERENCES `school` (`schoolId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `proposed_answer`
+--
+ALTER TABLE `proposed_answer`
+  ADD CONSTRAINT `FK_CONSTRAINTS_QUESTION_ID` FOREIGN KEY (`questionId`) REFERENCES `question` (`questionId`);
+
+--
+-- Constraints for table `question`
+--
+ALTER TABLE `question`
+  ADD CONSTRAINT `FK_CONSTRAINTS_COMPETITION_ID` FOREIGN KEY (`cmpId`) REFERENCES `competition` (`cmpId`);
+SET FOREIGN_KEY_CHECKS=1;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

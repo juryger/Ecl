@@ -260,18 +260,18 @@ class DbMySql implements DbConnection {
 
 class DbMySqlTest extends DbMySql {
     protected $dbhost = "127.0.0.1";
+    protected $dbname = "contest";
     protected $user   = "root";
     protected $pass   = "";
-    protected $dbname = "contest";
 
     public function __construct() { }
 }
 
 class DbMySqlProd extends DbMySql {
-    protected $user   = "iuri668sql";
-    protected $pass   = "";
     protected $dbhost = "128.199.211.172";
     protected $dbname = "iuri668db";
+    protected $user   = "iuri668sql";
+    protected $pass   = "";
 
     public function __construct() { }
 }

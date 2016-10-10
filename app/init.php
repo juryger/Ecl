@@ -1,7 +1,7 @@
 <?php
 
-define("BASE_URL", "/ecl/");
-define("DB_STAGE", "DbMySqlTest");
+define("BASE_URL", "/ecl/"); // /~iuri668/web601/ecl/
+define("DB_STAGE", "DbMySqlTest"); // DbMySqlProd
 
 /**
  * Includes core classes for further processing.

@@ -16,7 +16,8 @@ ob_start();
     <br/>
     <?php if ($data['contestInfo']->isSubmitted == false) { ?>
         <!--todo: need to validate that form values are set and correct (on submit)-->
-        <form name="contestForm" action="<?php echo BASE_URL; ?>public/contest/submit" method="post" onsubmit="return validateContestForm();">
+        <!--url for action: <?php echo BASE_URL; ?>public/contest/submit-->
+        <form name="contestForm" id="contestForm" action="javascript:sendFormAjax('contestForm', '<?php echo BASE_URL; ?>public/contest/submit', 'ajaxResult');" method="post" onsubmit="return validateContestForm();">
             <label for="classRoom">Class room<abbr title="This field is mandatory">*</abbr>&nbsp;</label>
             <input type="text" name="classRoom" value="" required />
             <br/>
@@ -55,6 +56,8 @@ ob_start();
             <br/>
             <input type="submit" name="submitCompForm" value="Send" />
         </form>
+        <br/>
+        <div id="ajaxResult"></div>
     <?php
     }
     else if (!$data['contestInfo']->response->isAlreadyRegistered) { ?>

@@ -42,3 +42,18 @@ function validateContestForm() {
     validationSummary.html("");
     return true;
 }
+
+function sendFormAjax(pFormName, pUrl, pResult) {
+    var msg = $('#' + pFormName).serialize();
+    $.ajax({
+        type: 'POST',
+        url: pUrl,
+        data: msg,
+        success: function(data) {
+            $('#' + pResult).html(data);
+        },
+        error:  function(xhr, str){
+            alert('Error occurred during sending form to server through AJAX, code:' + xhr.responseCode + ', msg: ' + str);
+        }
+    });
+}

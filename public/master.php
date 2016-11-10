@@ -7,19 +7,20 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!--<link rel="icon" href="/favicon.ico">-->
+    <link rel="icon" href="<?php echo BASE_URL; ?>public/images/favicon.ico">
 
     <title>
         <?php echo $viewTitle; ?>
     </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../public/css/sticky-footer-navbar.css" rel="stylesheet">
-    <link href="../public/css/dashboard.css" rel="stylesheet">
-    <link href="../public/css/blog.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>public/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>public/css/dashboard.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>public/css/blog.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>public/css/ecl.css" rel="stylesheet">
   </head>
 
   <body>
@@ -71,11 +72,12 @@
       </div>
     </nav>
 
-    <!-- Begin page content -->
+    <!-- Page content -->
     <div class="container">
       <?php echo $viewContent; ?>
     </div>
 
+    <!-- Page footer-->
     <footer class="footer" style="position: fixed;">
       <div class="container" style="text-align: center">
         <p class="text-muted">
@@ -85,13 +87,13 @@
       </div>
     </footer>
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../public/js/ecl.js"></script>
-    <script src="../public/js/jquery-3.1.0.min.js"></script>
-    <script>window.jQuery</script>
-    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../..<?php echo BASE_URL; ?>public/js/ecl-contest.js"></script>
+    <script src="../..<?php echo BASE_URL; ?>public/js/ecl-contest-banner.js"></script>
+    <script src="../..<?php echo BASE_URL; ?>/public/js/jquery-3.1.0.min.js"></script>
+    <script src="../..<?php echo BASE_URL; ?>public/js/bootstrap.min.js"></script>
+    <script src="../..<?php echo BASE_URL; ?>public/js/jquery-ui.min.js"></script>
+
   </body>
 </html>

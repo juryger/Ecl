@@ -31,6 +31,27 @@ ob_start();
 
             <?php if ($data['sectionInfo']->id == 'intro'): ?>
                 <span>The content of page Introduction and How to start</span>
+                <br/>
+                <br/>
+                <div class="banner-fixed">
+                    <img id="cbBackground" src="../..<?php echo BASE_URL; ?>public/images/contest/background.png" class="banner-hidden banner-absolute" />
+                    <img id="cbQuestionOneLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbArePrettyGood.png" class="banner-hidden banner-absolute" />
+                    <img id="cbQuestionTwoLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbSomethingAmazing.png" class="banner-hidden banner-absolute" />
+                    <img id="cbFace1" src="../..<?php echo BASE_URL; ?>public/images/contest/face1.png" class="banner-hidden banner-absolute" />
+                    <img id="cbFace2" src="../..<?php echo BASE_URL; ?>public/images/contest/face2.png" class="banner-hidden banner-absolute" />
+                    <img id="cbFace3" src="../..<?php echo BASE_URL; ?>public/images/contest/face3.png" class="banner-hidden banner-absolute" />
+                    <img id="cbFace4" src="../..<?php echo BASE_URL; ?>public/images/contest/face4.png" class="banner-hidden banner-absolute" />
+                    <img id="cbBlindsLeft" src="../..<?php echo BASE_URL; ?>public/images/contest/blinds_left.png" class="banner-absolute" style="display: none;"/>
+                    <img id="cbBlindsRight" src="../..<?php echo BASE_URL; ?>public/images/contest/blinds_right.png" class="banner-absolute" style="display: none;"/>
+                    <img id="cbInvitationLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbTakePart.png" class="banner-hidden banner-absolute" />
+                    <img id="cbBlindsLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbTakePart.png" class="banner-hidden banner-absolute" />
+                    <img id="cbContestNameLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbContestName.png" class="banner-hidden banner-absolute" />
+                    <div id="cbContestApply" class="banner-hidden banner-absolute">
+                        <a id="cbApplyLink" href="../..<?php echo BASE_URL; ?>public/index.php?path=contest/index">
+                            <img id="cbApplyLabel" src="../..<?php echo BASE_URL; ?>public/images/contest/lbApply.png" />
+                        </a>
+                    </div>
+                </div>
             <?php elseif ($data['sectionInfo']->id == 'news'): ?>
                 <span>The content of page News</span>
             <?php elseif ($data['sectionInfo']->id == 'faq'): ?>
@@ -48,19 +69,19 @@ ob_start();
                 <?=$data['sectionInfo']->title?>
             <?php endif; ?>
         </div>
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar"
-            style="float:right;">
-            <div class="sidebar-module sidebar-module-inset">
-                <h4>News</h4>
-                <p>17 June 2016</br>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-            <div class="sidebar-module">
-                <h4>Gallery</h4>
-                <a href="<?php echo BASE_URL; ?>public/community/index/gallery">
-                    <img src="../..<?php echo BASE_URL; ?>public/images/logo.png" title="work"/>
-                </a>
-            </div>
-        </div>
+<!--        <div class="col-sm-3 col-sm-offset-1 blog-sidebar"-->
+<!--            style="float:right;">-->
+<!--            <div class="sidebar-module sidebar-module-inset">-->
+<!--                <h4>News</h4>-->
+<!--                <p>17 June 2016</br>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>-->
+<!--            </div>-->
+<!--            <div class="sidebar-module">-->
+<!--                <h4>Gallery</h4>-->
+<!--                <a href="--><?php //echo BASE_URL; ?><!--public/community/index/gallery">-->
+<!--                    <img src="../..--><?php //echo BASE_URL; ?><!--public/images/logo.png" title="work"/>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </div>
 
@@ -76,3 +97,10 @@ ob_end_clean();
 require_once '../..'.BASE_URL.'public/master.php';
 
 ?>
+
+
+<script>
+    $(function () {
+        fireContestAnimation();
+    });
+</script>

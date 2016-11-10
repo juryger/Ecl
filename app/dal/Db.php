@@ -262,7 +262,7 @@ class DbMySqlTest extends DbMySql {
     protected $dbhost = "127.0.0.1";
     protected $dbname = "contest";
     protected $user   = "root";
-    protected $pass   = "tpcbygat24";
+    protected $pass   = "";
 
     public function __construct() { }
 }
